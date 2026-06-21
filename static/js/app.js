@@ -84,7 +84,7 @@ function renderBoxes() {
         <button class="btn sm danger" onclick="closeBox('${b.id}')" ${b.status==='closed'?'disabled':''}>Close</button>
         <button class="btn sm" onclick="printBoxById('${b.id}')">🖨️ Print</button>
         <button class="btn sm success" onclick="exportBoxById('${b.id}')">📊 Excel</button>
-        <button class="btn sm danger" onclick="deleteBox('${b.id}')">🗑 Delete</button>
+        <button class="btn sm danger" onclick="deleteBox('${b.id}')" style="display:${b.status==='closed'?'none':'inline-flex'}">🗑 Delete</button>
       </div>
       <div class="box-body" id="body-${b.id}">
         ${b.items.length
